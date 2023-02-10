@@ -36,14 +36,19 @@ gem "jbuilder"
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
 
+gem 'ostruct', '~> 0.5.5'
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
-
+gem 'friendly_id', '~> 5.4.0'
+gem 'devise', '~> 4.8', '>= 4.8.1'
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
+gem 'jquery-rails'
+
 # Use Sass to process CSS
-# gem "sassc-rails"
+#gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -51,6 +56,7 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem 'pry-byebug'
 end
 
 group :development do
@@ -64,3 +70,10 @@ group :development do
   # gem "spring"
 end
 
+#bootstrap gem file 
+gem 'bootstrap', '~> 4.0.0'
+
+#sass-rails gem file 
+
+# authorization 
+gem 'petergate', '~> 3.0'

@@ -12,6 +12,7 @@ require "action_mailbox/engine"
 require "action_text/engine"
 require "action_view/railtie"
 require "action_cable/engine"
+
 # require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
@@ -33,5 +34,7 @@ module VarmaPortfolio
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    #this should be in video udemy[101] ----> config.action_controller.permit_all_parameters = true
   end
 end

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title><%= @page_title %></title>
+  <meta name="keywords" content="<%= @seo_keywords %>" />
+
+  <style type='text/css'>
+    .sign-out{
+      background:lightblue;
+    }
+  </style>
+    <title>VarmaPortfolio</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "portfolio", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    
+    <%= render "shared/nav", location: "top"%>
+
+
+
+    <% if current_user.is_a?(User) %>
+      <%= link_to   "logout", destroy_user_session_path, method: :delete, class: "sign-out"%>
+    <% else %>
+    <%= link_to   "register", new_user_registration_path, class: "sign-out"%>
+    <%= link_to   "login", new_user_session_path, class: "sign-out"%>
+    <% end %>
+    <%= yield %>
+
+
+    <%= source_helper("portfolio") %>
+  </body>
+</html>
+
+
+
+

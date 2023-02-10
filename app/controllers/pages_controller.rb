@@ -9,4 +9,8 @@ class PagesController < ApplicationController
 
   def contact
   end
+
+  def me 
+    @portfolios = Portfolio.all
+  end  
 end

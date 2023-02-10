@@ -1,0 +1,21 @@
+
+
+<%= image_tag @portfolio_item.main_image %>
+
+<h1><%= @portfolio_item.title %></h1>
+
+<em><%= @portfolio_item.subtitle %></em>
+
+<p><%= @portfolio_item.body %></p> 
+
+<%= button_to "Destroy this blog", @portfolio_item, method: :delete %>
+
+<h3> Technologies Used:</h3> 
+
+<%= @portfolio_item.technologies.find_each do |t| %>
+    <p> <%= t.name %></p>
+<% end %>    
+
+
+<%= Portfolio.find(params[:id]).technologies.name%>
+
